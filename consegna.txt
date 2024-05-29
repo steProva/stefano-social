@@ -1,0 +1,7 @@
+Inviare email a pietro.sardaro@lutech.it
+
+Oggetto: consegna progetto nome cognome
+
+messaggio email:
+    - link del progetto github
+    - link del sito online
