@@ -1,14 +1,25 @@
 import React from "react";
-import { useEffect, useContext, useState } from "react";
-import { DataContext, TDataContext } from "../../context/DataContext";
+import { useContext } from "react";
+import { DataContext, IDataContext } from "../../context/DataContext";
+import { Post, Reactions } from "../../data/tipi/types";
 
 export default function Body(): JSX.Element {
 
-    const {postsData} = useContext(DataContext) as TDataContext;
+    const {postsData} = useContext(DataContext) as IDataContext
 
     return (
         <div id="bodyPosts">
-            <p></p>
+            <ul id="posts">
+                {postsData && postsData.posts.map((i: Post) => (
+                    <div className="post" id={i.id.toString()}>
+                        <p className="title">User: {i.userId}, Post: {i.id}</p>
+                        <p>{i.title}</p>
+                        <p className="content">{i.body}</p>
+                        <p className="views">Visualizzazioni: {i.views}</p>
+                    </div>
+                ))}
+            </ul>
+
         </div>
     )
 

@@ -1,4 +1,11 @@
-export type Posts = {
+export interface Main {
+    posts: Post[]
+    total: number
+    skip: number
+    limit: number
+  }
+  
+  export interface Post {
     id: number
     title: string
     body: string
@@ -8,8 +15,7 @@ export type Posts = {
     userId: number
   }
   
-  export type Reactions = {
+  export interface Reactions {
     likes: number
     dislikes: number
   }
-  
