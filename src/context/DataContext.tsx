@@ -1,8 +1,9 @@
 import {createContext} from 'react';
-import { Main, Post } from "../data/tipi/types"
+import { Post } from "../data/tipi/types"
 
 export type IDataContext = {
-    postsData: Main | undefined
+    postsData: Post[] | undefined
+    setPostsData: (args: Post[]) => void | undefined
 }
 
 export const DataContext = createContext<IDataContext | undefined>(undefined)
