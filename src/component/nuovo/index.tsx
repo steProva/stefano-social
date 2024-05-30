@@ -68,7 +68,7 @@ export default function Nuovo(): JSX.Element {
                 <input 
                     type="text" 
                     className="text-black rounded-md my-3" 
-                    placeholder="Tags (spazio)..."
+                    placeholder="Tags (spazio) (cliccabili)..."
                     maxLength={50}
                     onChange={(e) => {setTags((e.target.value).split(" "))}} //i tag li separa con lo spazio
                 />

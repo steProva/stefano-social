@@ -22,7 +22,7 @@ export default function Body(): JSX.Element {
                         </div>
 
                         <div className="text-center justify-self-end my-5">Tags: {i.tags.map((tag) => (
-                            <a className="mx-1" rel="noreferrer noopener" target="_blank" href={"https://en.wikipedia.org/wiki/"+tag}> {/*se in tag ci sono caratteri non supportati dall'url
+                            <a className="mx-1" rel="noreferrer noopener" target="_blank" href={"https://en.wikipedia.org/wiki/"+tag} key={tag}> {/*se in tag ci sono caratteri non supportati dall'url
                             reindirizza alla pagina di errore di wikipedia*/}
                                 <span className="tag bg-purple-700 rounded-lg text-white w-96 text-center dark:bg-slate-200 dark:text-black transition-all p-0.5"> {tag} </span>
                             </a>
