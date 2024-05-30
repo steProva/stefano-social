@@ -1,4 +1,9 @@
-# Finiti:
+# Verifica social Stefano Scauzillo
+
+## Deployment:
+ https://stefano-social.vercel.app/ <br>
+
+### Finiti:
 
 -orologio <br>
 -implementato tailwind <br>
@@ -6,6 +11,6 @@
 -funziona offline (staccare internet per esempio) <br>
 -post solo c'è un nome utente <br>
 
-# Da fare:
+### Da fare:
 
 -implementare firebase <br>
