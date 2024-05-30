@@ -38,7 +38,7 @@ export default function Nuovo(): JSX.Element {
     return (
         <div className="rounded-md w-11/12 min-h-full bg-purple-700 flex flex-col my-2 p-2 py-5 text-white">
 
-           {logState && <span className="p-5">Login effettuato come: {user}<button onClick={() => changeLogState(!logState)} className="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75">Cambia utente</button></span>}
+           {logState && <span className="p-5">Login effettuato come: {user}<button onClick={() => changeLogState(!logState)} className="btn-nuovo">Cambia utente</button></span>}
 
            {logState || <div id="showUser" className="rounded-md p-5">
                 <input 
@@ -48,7 +48,7 @@ export default function Nuovo(): JSX.Element {
                     placeholder="Scegli lo username..."
                     onChange={(e) => setUser(e.target.value)}
                  />
-                 <button id="login" className="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75" onClick={() => changeLogState(!logState)}>Sign in</button>
+                 <button id="login" className="btn-nuovo" onClick={() => changeLogState(!logState)}>Sign in</button>
             </div> }
             {/* <button id="showButton" onClick={() => setShow(!show)}>Nuovo post</button> */} 
             {logState && user !== "" && <div id="showInput" className="p-5 m-7">
@@ -70,7 +70,7 @@ export default function Nuovo(): JSX.Element {
                     placeholder="Tags..."
                     onChange={(e) => {setTags((e.target.value).split(" "))}}
                 />
-                <button id="salva" className="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75" onClick={salvaNota}>Pubblica</button>
+                <button id="salva" className="btn-nuovo" onClick={salvaNota}>Pubblica</button>
             </div>}
         </div>
     )
