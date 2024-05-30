@@ -8,8 +8,8 @@ export default function Header(): JSX.Element {
     
 
     return (
-        <div className="mainHeader">
-            Header
+        <div className="bg-purple-700 text-white text-lg p-5 text-center rounded-md shadow-xl">
+            Stefano Scauzillo Social
         </div>
     )
 }

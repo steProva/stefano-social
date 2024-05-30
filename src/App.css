@@ -1,11 +1,3 @@
-.App {
-  display: flex;
-}
-
-Nuovo {
-  flex: 0.5;
-}
-
-Body {
-  flex: 0.5;
+iframe {
+  display: none
 }
