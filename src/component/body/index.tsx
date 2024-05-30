@@ -9,8 +9,8 @@ export default function Body(): JSX.Element {
 
     return (
 
-        <div id="bodyPosts flex-1">
-            <div id="posts" className="flex flex-wrap p-7 mx-15">
+        <div id="bodyPosts" className="flex pl-96">
+            <div id="posts" className="flex flex-col p-7 mx-15">
                 {postsData && postsData.map((i: Post) => (
                     <div className="w-96 h-96 m-2 p-3 shadow-xl bg-purple-300 dark:bg-purple-800 dark:text-white transition-all flex flex-col flex-grow rounded-md" id={i.id.toString()} key={i.id}>
 

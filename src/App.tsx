@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect } from 'react';
 
 import './App.css';
 
@@ -27,11 +27,12 @@ function App() {
     .then(json => setPostsData((json as Main).posts))
   }, []);
 
+
   return (
     <DataContext.Provider value={data}>
     <div className='p-5 dark:bg-slate-800 transition-all'>
       <Header />
-      <div className="flex">
+      <div className="flex justify-around">
         <Body />
         <Nuovo />
       </div>

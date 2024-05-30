@@ -32,7 +32,7 @@ export default function Nuovo(): JSX.Element {
     }
 
     return (
-        <div className=" dark:bg-slate-600 transition-all w-11/12 rounded-md min-h-full bg-purple-700 flex flex-col my-2 p-2 py-5 text-white">
+        <div id="nuovo" className="sticky top-36 dark:bg-slate-600 transition-all rounded-md h-full bg-purple-700 flex flex-col my-2 p-2 py-5 text-white flex-none">
 
            {logState && <span className="p-5 self-center"> {/* se sono loggato posso cambiare utente*/}
             <p className="bg-purple-300 rounded-lg text-black w-48 text-center dark:bg-slate-200 dark:text-black">{user}</p><br></br>
@@ -49,7 +49,7 @@ export default function Nuovo(): JSX.Element {
                  />
                  <button id="login" className="btn-nuovo" onClick={() => changeLogState(!logState)}>Sign in</button>
             </div> }
-            {logState && user !== "" && <div id="showInput" className="p-5 m-7"> {/*c'è bisogno di scrivere il nome utente la prima volta che viene caricata la pagina, user diverso da default*/}
+            {logState && user !== "" && <div id="showInput" className="p-5 m-7 flex flex-col"> {/*c'è bisogno di scrivere il nome utente la prima volta che viene caricata la pagina, user diverso da default*/}
                 <input //altrimenti carica l'ultimo utente scritto
                     type="text" 
                     className="text-black rounded-md my-3" 
