@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { DataContext, IDataContext } from "../../context/DataContext";
-import { Main, Post, Reactions } from "../../data/tipi/types";
 
 export default function Nuovo(): JSX.Element {
 
@@ -16,15 +15,15 @@ export default function Nuovo(): JSX.Element {
     function salvaNota() {
 
         const oggetto = {
-            id: 0,
+            id: 0, //placeholder, è inutile per ora
             title: titolo,
             body: testo,
             tags: tags,
             reactions: { 
-                likes: 0,
-                dislikes: 0
+                likes: 0, //placeholder
+                dislikes: 0 //placeholder
             },
-            views: 1,
+            views: 1, //placeholder
             userId: user
           }
 
@@ -35,9 +34,12 @@ export default function Nuovo(): JSX.Element {
     return (
         <div className=" dark:bg-slate-600 transition-all w-11/12 rounded-md min-h-full bg-purple-700 flex flex-col my-2 p-2 py-5 text-white">
 
-           {logState && <span className="p-5 self-center text-center">{user}<br></br><button onClick={() => changeLogState(!logState)} className="btn-nuovo">Cambia utente</button></span>}
+           {logState && <span className="p-5 self-center"> {/* se sono loggato posso cambiare utente*/}
+            <p className="bg-purple-300 rounded-lg text-black w-48 text-center dark:bg-slate-200 dark:text-black">{user}</p><br></br>
+            <button onClick={() => changeLogState(!logState)} className="btn-nuovo ml-5">Cambia utente</button></span>
+            }
 
-           {logState || <div id="showUser" className="rounded-md p-5">
+           {logState || <div id="showUser" className="rounded-md p-5"> {/*mostra solo se non loggato*/}
                 <input 
                     className="rounded-md text-black px-2 my-4"
                     type="text"
@@ -47,26 +49,26 @@ export default function Nuovo(): JSX.Element {
                  />
                  <button id="login" className="btn-nuovo" onClick={() => changeLogState(!logState)}>Sign in</button>
             </div> }
-            {logState && user !== "" && <div id="showInput" className="p-5 m-7">
-                <input 
+            {logState && user !== "" && <div id="showInput" className="p-5 m-7"> {/*c'è bisogno di scrivere il nome utente la prima volta che viene caricata la pagina, user diverso da default*/}
+                <input //altrimenti carica l'ultimo utente scritto
                     type="text" 
-                    className="text-black rounded-md my-4" 
+                    className="text-black rounded-md my-3" 
                     placeholder="Titolo post..."
                     onChange={(e) => {setTitolo(e.target.value)}}
                 />
                 <textarea 
-                    className="text-black min-h-10 rounded-md my-4" 
+                    className="text-black min-h-10 rounded-md my-3" 
                     id="editor" 
                     placeholder="Contenuto del post..."
                     onChange={(e) => {setTesto(e.target.value)}}
                 />
                 <input 
                     type="text" 
-                    className="text-black rounded-md my-4" 
+                    className="text-black rounded-md my-3" 
                     placeholder="Tags..."
-                    onChange={(e) => {setTags((e.target.value).split(" "))}}
+                    onChange={(e) => {setTags((e.target.value).split(" "))}} //i tag li separa con lo spazio
                 />
-                <button id="salva" className="btn-nuovo" onClick={salvaNota}>Pubblica</button>
+                <button className="btn-nuovo" onClick={salvaNota}>Pubblica</button>
             </div>}
         </div>
     )

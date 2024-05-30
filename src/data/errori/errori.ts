@@ -1,4 +1,4 @@
-export function FETCH_ERROR (err: string) { 
+export function FETCH_ERROR (err: string) { //ritorna un array con un solo oggetto perché altrimenti avrei dovuto cambiare setPostsData in App.tsx
     return [{
     id: Infinity,
     title: err,
@@ -10,4 +10,4 @@ export function FETCH_ERROR (err: string) {
     },
     views: Infinity,
     userId: Infinity
-}] }
+}] } //il valore Infinity è messo per il meme

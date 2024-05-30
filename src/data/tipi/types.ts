@@ -18,4 +18,4 @@ export interface Main {
   export interface Reactions {
     likes: number
     dislikes: number
-  }
+  } //interfaccia completamente inutile ma l'ho messa per completezza con json to typescript
