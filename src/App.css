@@ -1,3 +1,7 @@
 iframe {
   display: none
 }
+
+input, textarea {
+  padding: 5px;
+}

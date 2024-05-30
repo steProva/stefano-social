@@ -26,10 +26,12 @@ function App() {
 
   return (
     <DataContext.Provider value={data}>
+    <div className='p-5 dark:bg-slate-800 transition-all'>
       <Header />
       <div className="flex">
         <Body />
         <Nuovo />
+      </div>
       </div>
     </DataContext.Provider>
   );
