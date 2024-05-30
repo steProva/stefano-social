@@ -15,7 +15,7 @@ export default function Body(): JSX.Element {
                     <div className="w-96 h-96 m-2 p-3 shadow-xl bg-purple-300 dark:bg-purple-800 dark:text-white transition-all flex flex-col flex-grow rounded-md" id={i.id.toString()} key={i.id}>
 
                         <p className="self-center">&#x1F466; {i.userId}</p>
-                        <p className="self-center my-5 bg-purple-700 rounded-lg text-white w-96 text-center dark:bg-slate-200 dark:text-black">{i.title}</p>
+                        <p className="self-center my-5 bg-purple-700 text-white w-96 text-center dark:bg-slate-200 dark:text-black">{i.title}</p>
 
                         <div className="overflow-y-scroll">
                             <p className="break-words mx-4">{i.body}</p>

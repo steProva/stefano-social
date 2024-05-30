@@ -44,7 +44,8 @@ export default function Nuovo(): JSX.Element {
                     className="rounded-md text-black px-2 my-4"
                     type="text"
                     id="userId"
-                    placeholder="Scegli lo username..."
+                    placeholder="Username (max 20)"
+                    maxLength={20}
                     onChange={(e) => setUser(e.target.value)}
                  />
                  <button id="login" className="btn-nuovo" onClick={() => changeLogState(!logState)}>Sign in</button>
@@ -53,19 +54,22 @@ export default function Nuovo(): JSX.Element {
                 <input //altrimenti carica l'ultimo utente scritto
                     type="text" 
                     className="text-black rounded-md my-3" 
-                    placeholder="Titolo post..."
+                    placeholder="Titolo post (max 30)"
+                    maxLength={30}
                     onChange={(e) => {setTitolo(e.target.value)}}
                 />
                 <textarea 
                     className="text-black min-h-10 rounded-md my-3" 
                     id="editor" 
                     placeholder="Contenuto del post..."
+                    rows={10}
                     onChange={(e) => {setTesto(e.target.value)}}
                 />
                 <input 
                     type="text" 
                     className="text-black rounded-md my-3" 
-                    placeholder="Tags..."
+                    placeholder="Tags (spazio)..."
+                    maxLength={50}
                     onChange={(e) => {setTags((e.target.value).split(" "))}} //i tag li separa con lo spazio
                 />
                 <button className="btn-nuovo" onClick={salvaNota}>Pubblica</button>

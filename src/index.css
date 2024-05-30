@@ -5,18 +5,8 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) var(--primary);
+  font-weight: 100;
 }
-
-#nuovo {
-  position: sticky;
-}
-
-/* #deficiente {
-  position: sticky;
-  top: 0;
-  height: 1000px;
-  background-color: red;
-} */
 
 @layer components {
   .btn-nuovo {
